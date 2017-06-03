@@ -28,7 +28,7 @@ export const reservedWords = {
 
 // And the keywords
 
-export const isKeyword = makePredicate("break case catch continue debugger default do else finally for function if return switch throw try var while with null true false instanceof typeof void delete new in this let const class extends export import yield super トッピング あり ぬき 丼 中毒性 新店舗 ニンニク入れますか 完食");
+export const isKeyword = makePredicate("break case catch continue debugger default do else finally for function if return switch throw try var while with null true false instanceof typeof void delete new in this let const class extends export import yield super トッピング あり ぬき");
 
 // ## Character categories
 
