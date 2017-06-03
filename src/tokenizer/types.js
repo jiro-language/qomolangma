@@ -163,6 +163,7 @@ export const keywords = {
   "try": new KeywordTokenType("try"),
   "var": new KeywordTokenType("var"),
   "let": new KeywordTokenType("let"),
+  "丼": new KeywordTokenType("let"),
   "const": new KeywordTokenType("const"),
   "while": new KeywordTokenType("while", { isLoop }),
   "with": new KeywordTokenType("with"),

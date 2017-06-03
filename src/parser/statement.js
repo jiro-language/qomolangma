@@ -97,6 +97,7 @@ export default class StatementParser extends ExpressionParser {
       case tt._throw: return this.parseThrowStatement(node);
       case tt._try: return this.parseTryStatement(node);
 
+      case tt._丼:
       case tt._let:
       case tt._const:
         if (!declaration) this.unexpected(); // NOTE: falls through to _var
