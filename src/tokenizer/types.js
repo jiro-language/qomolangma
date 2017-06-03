@@ -171,6 +171,7 @@ export const keywords = {
   "this": new KeywordTokenType("this", { startsExpr }),
   "super": new KeywordTokenType("super", { startsExpr }),
   "class": new KeywordTokenType("class"),
+  "店": new KeywordTokenType("class"),
   "extends": new KeywordTokenType("extends", { beforeExpr }),
   "export": new KeywordTokenType("export"),
   "import": new KeywordTokenType("import", { startsExpr }),

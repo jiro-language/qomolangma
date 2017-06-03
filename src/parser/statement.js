@@ -84,6 +84,7 @@ export default class StatementParser extends ExpressionParser {
         if (!declaration) this.unexpected();
         return this.parseFunctionStatement(node);
 
+      case tt._店:
       case tt._class:
         if (!declaration) this.unexpected();
         return this.parseClass(node, true);
