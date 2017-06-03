@@ -165,6 +165,7 @@ export const keywords = {
   "if": new KeywordTokenType("if"),
   "ニンニク入れますか": new KeywordTokenType("if"),
   "return": new KeywordTokenType("return", { beforeExpr }),
+  "完食": new KeywordTokenType("return", { beforeExpr }),
   "switch": new KeywordTokenType("switch"),
   "throw": new KeywordTokenType("throw", { beforeExpr }),
   "try": new KeywordTokenType("try"),
