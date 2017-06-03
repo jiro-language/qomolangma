@@ -80,6 +80,7 @@ export default class StatementParser extends ExpressionParser {
       case tt._do: return this.parseDoStatement(node);
       case tt._for: return this.parseForStatement(node);
       case tt._function:
+      case tt._トッピング:
         if (!declaration) this.unexpected();
         return this.parseFunctionStatement(node);
 
