@@ -506,7 +506,7 @@ export default class ExpressionParser extends LValParser {
         this.next();
         return this.finishNode(node, "NullLiteral");
 
-      case tt._true: case tt._false:
+      case tt._true: case tt._false: case tt._あり: case tt._ぬき:
         node = this.startNode();
         node.value = this.match(tt._true);
         this.next();
