@@ -373,7 +373,22 @@ export default class Tokenizer extends LocationParser {
   readToken_plus_min(code: number): void { // '+-'
     const next = this.input.charCodeAt(this.state.pos + 1);
 
-    if (next === code) {
+    if (next === 12471 &&
+      this.input.charCodeAt(this.state.pos + 2) === 12510 &&
+      this.input.charCodeAt(this.state.pos + 3) === 12471
+    ) {
+      this.state.pos += 4;
+      return this.finishToken(tt.incDec, "++");
+    }
+
+    if (next === 12394 &&
+      this.input.charCodeAt(this.state.pos + 2) === 12417
+    ) {
+      this.state.pos += 3;
+      return this.finishToken(tt.incDec, "--");
+    }
+
+    if (next === code && (next === 43 || next === 45)) {
       if (next === 45 && this.input.charCodeAt(this.state.pos + 2) === 62 && lineBreak.test(this.input.slice(this.state.lastTokEnd, this.state.pos))) {
         // A `-->` line comment
         this.skipLineComment(3);
@@ -507,7 +522,7 @@ export default class Tokenizer extends LocationParser {
       case 94: // '^'
         return this.readToken_caret();
 
-      case 43: case 45: // '+-'
+      case 43: case 45: case 23569: case 12510: // '+-マ少'
         return this.readToken_plus_min(code);
 
       case 60: case 62: // '<>'
