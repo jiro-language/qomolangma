@@ -339,8 +339,8 @@ export default class StatementParser extends ExpressionParser {
 
     let cur;
     for (let sawDefault; !this.match(tt.braceR); ) {
-      if (this.match(tt._case) || this.match(tt._default)) {
-        const isCase = this.match(tt._case);
+      const isCase = this.match(tt._case) || this.match(tt._ニンニク) || this.match(tt._ヤサイ) || this.match(tt._アブラ) || this.match(tt._カラメ);
+      if (isCase || this.match(tt._default) || this.match(tt._そのままで)) {
         if (cur) this.finishNode(cur, "SwitchCase");
         cases.push(cur = this.startNode());
         cur.consequent = [];
