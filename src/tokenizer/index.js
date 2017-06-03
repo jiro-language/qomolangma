@@ -292,6 +292,9 @@ export default class Tokenizer extends LocationParser {
     this.state.type = type;
     this.state.value = val;
 
+    // for debug purpose
+    console.log(type.label, val);
+
     this.updateContext(prevType);
   }
 

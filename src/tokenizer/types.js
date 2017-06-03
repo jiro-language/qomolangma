@@ -155,6 +155,7 @@ export const keywords = {
   "finally": new KeywordTokenType("finally"),
   "for": new KeywordTokenType("for", { isLoop }),
   "function": new KeywordTokenType("function", { startsExpr }),
+  "トッピング": new KeywordTokenType("function", { startsExpr }),
   "if": new KeywordTokenType("if"),
   "return": new KeywordTokenType("return", { beforeExpr }),
   "switch": new KeywordTokenType("switch"),
