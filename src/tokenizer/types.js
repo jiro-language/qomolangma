@@ -145,6 +145,7 @@ export const types: { [name: string]: TokenType } = {
 
 export const keywords = {
   "break": new KeywordTokenType("break"),
+  "退店": new KeywordTokenType("break"),
   "case": new KeywordTokenType("case", { beforeExpr }),
   "catch": new KeywordTokenType("catch"),
   "continue": new KeywordTokenType("continue"),
@@ -168,6 +169,7 @@ export const keywords = {
   "while": new KeywordTokenType("while", { isLoop }),
   "with": new KeywordTokenType("with"),
   "new": new KeywordTokenType("new", { beforeExpr, startsExpr }),
+  "新店舗": new KeywordTokenType("new", { beforeExpr, startsExpr }),
   "this": new KeywordTokenType("this", { startsExpr }),
   "super": new KeywordTokenType("super", { startsExpr }),
   "class": new KeywordTokenType("class"),

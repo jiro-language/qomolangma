@@ -75,6 +75,7 @@ export default class StatementParser extends ExpressionParser {
 
     switch (starttype) {
       // $FlowFixMe
+      case tt._退店:
       case tt._break: case tt._continue: return this.parseBreakContinueStatement(node, starttype.keyword);
       case tt._debugger: return this.parseDebuggerStatement(node);
       case tt._do: return this.parseDoStatement(node);

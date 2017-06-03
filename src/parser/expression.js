@@ -543,6 +543,7 @@ export default class ExpressionParser extends LValParser {
           this.unexpected();
         }
 
+      case tt._新店舗:
       case tt._new:
         return this.parseNew();
 
